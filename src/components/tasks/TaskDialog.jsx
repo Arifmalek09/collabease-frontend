@@ -205,7 +205,6 @@ export default function TaskDialog({ task }) {
                   <Menu.Item key={el.label}>
                     {({ active }) => (
                       <button
-                        disabled={index === 0 ? false : !user.isAdmin}
                         onClick={el?.onClick}
                         className={`${
                           active ? "bg-green-500 text-white" : "text-gray-900"
@@ -229,7 +228,6 @@ export default function TaskDialog({ task }) {
                 <Menu.Item>
                   {({ active }) => (
                     <button
-                      disabled={!user.isAdmin}
                       onClick={() => deleteClicks()}
                       className={`${
                         active ? "bg-red-100 text-red-900" : "text-red-900"

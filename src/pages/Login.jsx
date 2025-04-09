@@ -25,6 +25,7 @@ const Login = () => {
 
       dispatch(setCredentials(res));
       navigate("/");
+      window.location.reload()
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
